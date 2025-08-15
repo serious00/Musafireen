@@ -1,0 +1,17 @@
+/* Global theme toggling that works even with hardcoded colors */
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+/* Invert the whole page in dark mode */
+html[data-theme="dark"] body {
+  filter: invert(1) hue-rotate(180deg);
+}
+/* Un-invert media & our component host */
+html[data-theme="dark"] img,
+html[data-theme="dark"] video,
+html[data-theme="dark"] svg,
+html[data-theme="dark"] canvas,
+html[data-theme="dark"] iframe,
+html[data-theme="dark"] reem-settings-host { /* custom tag used as host */
+  filter: invert(1) hue-rotate(180deg);
+}
